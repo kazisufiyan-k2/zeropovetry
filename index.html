@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeropovetry - गरीबी उन्मूलन के लिए सहायता</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-heart"></i>
+                    <span>zeropovetry </span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">होम</a></li>
+                    <li><a href="#programs">कार्यक्रम</a></li>
+                    <li><a href="#blog">ब्लॉग</a></li>
+                    <li><a href="#donate">दान</a></li>
+                    <li><a href="#contact">संपर्क</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn-chat" onclick="toggleChatbot()">
+                        <i class="fas fa-comments"></i> AI सहायता
+                    </button>
+                    <button class="btn-donate" onclick="scrollToSection('donate')">
+                        दान करें
+                    </button>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>गरीबी के खिलाफ एक साथ खड़े होकर<br><span class="highlight">बदलाव लाएं</span></h1>
+                <p>हमारे साथ जुड़ें और जरूरतमंद लोगों की मदद करें। भोजन, कपड़े, शिक्षा और आवास के लिए सहायता प्रदान करें।</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('programs')">
+                        <i class="fas fa-hands-helping"></i> मदद करें
+                    </button>
+                    <button class="btn-secondary" onclick="toggleChatbot()">
+                        <i class="fas fa-robot"></i> AI से पूछें
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>50,000+</h3>
+                        <p>मदद मिली</p>
+                    </div>
+                    <div class="stat">
+                        <h3>1,200+</h3>
+                        <p>स्वयंसेवक</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>शहर</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/1318617341/photo/low-angle-view-group-of-volunteers-busy-working-by-arranging-vegetables-and-clothes-on.jpg?s=612x612&w=0&k=20&c=CJsDJ1nIMKr5NPBQufc5eyjsbSV_3XhqgcQusavGXIk=" alt="सहायता">
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>हमारे कार्यक्रम</h2>
+                <p>विभिन्न क्षेत्रों में व्यापक सहायता प्रदान करते हैं</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>भोजन सहायता</h3>
+                    <p>पौष्टिक भोजन, राशन वितरण, और सामुदायिक रसोई के माध्यम से भूखे लोगों की मदद।</p>
+                    <ul>
+                        <li>दैनिक भोजन वितरण</li>
+                        <li>राशन किट वितरण</li>
+                        <li>पोषण कार्यक्रम</li>
+                        <li>सामुदायिक रसोई</li>
+                    </ul>
+                    <button class="btn-program" onclick="openProgramModal('food')">विस्तार से जानें</button>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>कपड़े सहायता</h3>
+                    <p>सभी मौसमों के लिए कपड़े, जूते, और अन्य आवश्यक वस्तुओं का वितरण।</p>
+                    <ul>
+                        <li>मौसमी कपड़े</li>
+                        <li>स्कूल यूनिफॉर्म</li>
+                        <li>जूते-चप्पल</li>
+                        <li>कंबल वितरण</li>
+                    </ul>
+                    <button class="btn-program" onclick="openProgramModal('clothing')">विस्तार से जानें</button>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>शिक्षा सहायता</h3>
+                    <p>बच्चों की शिक्षा, स्कॉलरशिप, और कौशल विकास कार्यक्रम।</p>
+                    <ul>
+                        <li>निःशुल्क शिक्षा</li>
+                        <li>स्कॉलरशिप प्रोग्राम</li>
+                        <li>कौशल विकास</li>
+                        <li>डिजिटल शिक्षा</li>
+                    </ul>
+                    <button class="btn-program" onclick="openProgramModal('education')">विस्तार से जानें</button>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>आवास सहायता</h3>
+                    <p>अस्थायी आवास, आश्रय गृह, और स्थायी आवास समाधान।</p>
+                    <ul>
+                        <li>अस्थायी आश्रय</li>
+                        <li>आश्रय गृह</li>
+                        <li>घर निर्माण सहायता</li>
+                        <li>किराया सहायता</li>
+                    </ul>
+                    <button class="btn-program" onclick="openProgramModal('housing')">विस्तार से जानें</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>ब्लॉग और समाचार</h2>
+                <p>नवीनतम अपडेट और सफलता की कहानियां</p>
+            </div>
+            <div class="blog-controls">
+                <button class="btn-secondary" onclick="openBlogCreator()">
+                    <i class="fas fa-plus"></i> नया ब्लॉग लिखें
+                </button>
+                <input type="text" id="blogSearch" placeholder="ब्लॉग खोजें..." onkeyup="searchBlogs()">
+            </div>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <div class="section-header">
+                <h2>दान करें</h2>
+                <p>आपका योगदान किसी के जीवन को बदल सकता है</p>
+            </div>
+            <div class="donate-content">
+                <div class="donate-options">
+                    <div class="donate-card">
+                        <h3>एक बार दान</h3>
+                        <div class="amount-buttons">
+                            <button class="amount-btn" onclick="selectAmount(500)">₹500</button>
+                            <button class="amount-btn" onclick="selectAmount(1000)">₹1000</button>
+                            <button class="amount-btn" onclick="selectAmount(2000)">₹2000</button>
+                            <button class="amount-btn" onclick="selectAmount(5000)">₹5000</button>
+                        </div>
+                        <input type="number" id="customAmount" placeholder="अन्य राशि" min="1">
+                        <button class="btn-donate-main" onclick="processDonation()">
+                            <i class="fas fa-heart"></i> दान करें
+                        </button>
+                    </div>
+                    <div class="donate-card">
+                        <h3>मासिक दान</h3>
+                        <p>नियमित योगदान के लिए</p>
+                        <div class="monthly-options">
+                            <label>
+                                <input type="radio" name="monthly" value="500">
+                                <span>₹500/माह</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="monthly" value="1000">
+                                <span>₹1000/माह</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="monthly" value="2000">
+                                <span>₹2000/माह</span>
+                            </label>
+                        </div>
+                        <button class="btn-donate-main" onclick="setupMonthlyDonation()">
+                            <i class="fas fa-calendar-alt"></i> मासिक दान शुरू करें
+                        </button>
+                    </div>
+                </div>
+                <div class="donation-impact">
+                    <h3>आपके दान का प्रभाव</h3>
+                    <div class="impact-items">
+                        <div class="impact-item">
+                            <i class="fas fa-utensils"></i>
+                            <p>₹100 = 5 लोगों को भोजन</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-tshirt"></i>
+                            <p>₹500 = 5 बच्चों को कपड़े</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-book"></i>
+                            <p>₹1000 = 1 बच्चे की 1 माह की शिक्षा</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>संपर्क करें</h2>
+                <p>हमसे जुड़ें और सहायता प्राप्त करें या योगदान दें</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>संपर्क जानकारी</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>फोन</h4>
+                            <p>+91 93922 42292</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>ईमेल</h4>
+                            <p>help@zeropovetry.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>पता</h4>
+                            <p>umrakh-snpit </p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>संदेश भेजें</h3>
+                    <form onsubmit="submitContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">नाम *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ईमेल *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">फोन नंबर</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="helpType">सहायता का प्रकार</label>
+                            <select id="helpType" name="helpType">
+                                <option value="">चुनें</option>
+                                <option value="food">भोजन सहायता</option>
+                                <option value="clothing">कपड़े सहायता</option>
+                                <option value="education">शिक्षा सहायता</option>
+                                <option value="housing">आवास सहायता</option>
+                                <option value="volunteer">स्वयंसेवक बनना</option>
+                                <option value="other">अन्य</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">संदेश *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">संदेश भेजें</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heart"></i>
+                        <span>zeropovetry</span>
+                    </div>
+                    <p>गरीबी उन्मूलन के लिए समर्पित एक संगठन। हमारा मिशन है हर जरूरतमंद व्यक्ति तक सहायता पहुंचाना।</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>त्वरित लिंक</h4>
+                    <ul>
+                        <li><a href="#home">होम</a></li>
+                        <li><a href="#programs">कार्यक्रम</a></li>
+                        <li><a href="#blog">ब्लॉग</a></li>
+                        <li><a href="#donate">दान</a></li>
+                        <li><a href="#contact">संपर्क</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>सेवाएं</h4>
+                    <ul>
+                        <li><a href="#">भोजन सहायता</a></li>
+                        <li><a href="#">कपड़े सहायता</a></li>
+                        <li><a href="#">शिक्षा सहायता</a></li>
+                        <li><a href="#">आवास सहायता</a></li>
+                        <li><a href="#">स्वयंसेवक रजिस्ट्रेशन</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>संपर्क</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +91 9316410612</p>
+                        <p><i class="fas fa-envelope"></i> kazisufiyan@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> umrakh-snpit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 zeropovetry. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <div class="chatbot-header">
+            <h4><i class="fas fa-robot"></i> AI सहायक</h4>
+            <button class="close-chatbot" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-message bot-message">
+                <p>नमस्ते! मैं आपकी सहायता के लिए यहां हूं। आप कैसे मदद चाहते हैं?</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatInput" placeholder="अपना संदेश लिखें..." onkeypress="handleChatKeyPress(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="programModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('programModal')">&times;</span>
+            <div id="programModalContent"></div>
+        </div>
+    </div>
+
+    <div id="blogCreatorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('blogCreatorModal')">&times;</span>
+            <div class="blog-creator">
+                <h3>नया ब्लॉग पोस्ट लिखें</h3>
+                <form onsubmit="createBlogPost(event)">
+                    <div class="form-group">
+                        <label for="blogTitle">शीर्षक *</label>
+                        <input type="text" id="blogTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogAuthor">लेखक *</label>
+                        <input type="text" id="blogAuthor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogCategory">श्रेणी</label>
+                        <select id="blogCategory">
+                            <option value="success">सफलता की कहानी</option>
+                            <option value="news">समाचार</option>
+                            <option value="program">कार्यक्रम अपडेट</option>
+                            <option value="volunteer">स्वयंसेवक</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogContent">सामग्री *</label>
+                        <textarea id="blogContent" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">प्रकाशित करें</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
